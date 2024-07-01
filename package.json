@@ -1,0 +1,31 @@
+{
+  "name": "entrega-4-api-rest",
+  "version": "1.0.0",
+  "description": "todo list api rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "todo",
+    "api-rest",
+    "node",
+    "typescript"
+  ],
+  "author": "Claudio Martin Herranz",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "db-local": "3.1.0",
+    "express": "4.19.2"
+  },
+  "devDependencies": {
+    "standard": "17.1.0",
+    "typescript": "5.5.2",
+    "vitest": "^1.6.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
