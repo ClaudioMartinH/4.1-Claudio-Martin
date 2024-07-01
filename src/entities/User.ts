@@ -1,10 +1,8 @@
 export class User {
-    _id: string
     username: string
     password: string
 
-    constructor(id: string, username: string, password: string){
-        this._id = id
+    constructor(username: string, password: string){
         this.username = username
         this.password = password
     }
