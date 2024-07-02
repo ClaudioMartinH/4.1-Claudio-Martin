@@ -11,7 +11,7 @@ export class TaskService {
   async getTasks(): Promise<Task[]> {
     return await this.taskRepository.getAllTasks();
   }
-  async getTask(id: number): Promise<Task | null> {
+  async getTaskById(id: number): Promise<Task | null> {
     return await this.taskRepository.getTaskById(id);
   }
   async addTask(id: number, title: string, completed: boolean): Promise<Task> {
@@ -27,7 +27,7 @@ export class TaskService {
     taskToUpdate.completed = completed;
     await this.taskRepository.updateTask(taskToUpdate);
   }
-  async deleteTask(id: number): Promise<void> {
+  async deleteTaskById(id: number): Promise<void> {
     await this.taskRepository.deleteTaskById(id)
   }
 }

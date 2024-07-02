@@ -1,11 +1,13 @@
 import { Request, Response } from "express";
-import { TaskRepositoryImplementation } from "../../src/repositories/TaskRepositoryImpl";
-import { TaskService } from "../services/taskServices";
+import { TaskRepositoryImplementation } from "../../domain/repositories/TaskRepositoryImpl";
+import { TaskService } from "../../application/services/taskServices";
+import error404 from "../../infrastructure/controllers/errorController"
+
 
 const taskRepository = new TaskRepositoryImplementation();
 
 export class TaskController {
-  static async getTasks(req: Request, res: Response) {
+  public async getTasks(req: Request, res: Response) {
     try {
       const taskService = new TaskService(taskRepository);
       const tasks = await taskService.getTasks();
@@ -15,7 +17,7 @@ export class TaskController {
     }
   }
 
-  static async getTask(req: Request, res: Response) {
+  public async getTaskById(req: Request, res: Response) {
     try {
       const { id: idString } = req.params;
       const id = parseInt(idString);
@@ -23,9 +25,9 @@ export class TaskController {
         return res.status(400).json({ error: "Invalid ID format" });
       }
       const taskService = new TaskService(taskRepository);
-      const task = await taskService.getTask(id);
+      const task = await taskService.getTaskById(id);
       if (!task) {
-        return res.status(404).json({ message: "Task not found" });
+        return error404;
       }
       res.status(200).json(task);
     } catch (error) {
@@ -33,7 +35,7 @@ export class TaskController {
     }
   }
 
-  static async addTask(req: Request, res: Response) {
+  public async addTask(req: Request, res: Response) {
     try {
       const { id, title, completed } = req.body;
       const taskService = new TaskService(taskRepository);
@@ -48,7 +50,7 @@ export class TaskController {
     }
   }
 
-  static async updateTask(req: Request, res: Response) {
+  public async updateTask(req: Request, res: Response) {
     try {
       const { id, title, completed } = req.body;
       const taskService = new TaskService(taskRepository);
@@ -61,12 +63,12 @@ export class TaskController {
     }
   }
 
-  static async deleteTask(req: Request, res: Response) {
+  public async deleteTaskById(req: Request, res: Response) {
     try {
       const { id: idString } = req.params;
       const id = parseInt(idString);
       const taskService = new TaskService(taskRepository);
-      await taskService.deleteTask(id);
+      await taskService.deleteTaskById(id);
       res
         .status(200)
         .json({ message: "Task deleted succesfully" });
