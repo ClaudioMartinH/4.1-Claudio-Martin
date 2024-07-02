@@ -1,18 +1,23 @@
 import { Request, Response, NextFunction } from "express";
 import cors from "cors";
 
+
 export const cacheControlMiddleware = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  res.setHeader("Cache-control", "no-cache");
+  res.set("Cache-Control", "no-cache");
   next();
 };
-const CORS_OPTIONS = {
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  headersAllowed: ["Constent-Type", "Authorization"],
-};
 
-export const corsMiddleware = cors(CORS_OPTIONS);
+export const corsMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+};

@@ -6,4 +6,5 @@ export interface TaskRepository {
   addTask(task: Task): Promise<Task>;
   updateTask(task: Task): Promise<void>;
   deleteTaskById(id: number): Promise<void>;
+  toggleCompleted(id: number): Promise<void>;
 }

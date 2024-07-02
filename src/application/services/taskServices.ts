@@ -30,4 +30,7 @@ export class TaskService {
   async deleteTaskById(id: number): Promise<void> {
     await this.taskRepository.deleteTaskById(id)
   }
+  async toggleCompleted(id: number): Promise<void> {
+    await this.taskRepository.toggleCompleted(id)
+  }
 }
