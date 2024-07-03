@@ -58,5 +58,6 @@ contraseña: password123
  Hay que incluir en el endpoint (../tasks/:id) el numero de tarea que queremos eliminar.
 
 
-![TodoList]
-
+[![GitHub release](https://img.shields.io/github/release/ClaudioMartinH/4.1-Claudio-Martin.svg)](https://github.com/ClaudioMartinH/4.1-Claudio-Martin/releases)
+[![Build Status](https://travis-ci.com/ClaudioMartinH/4.1-Claudio-Martin.svg?branch=master)](https://travis-ci.com/ClaudioMartinH/4.1-Claudio-Martin)
+[![Coverage Status](https://coveralls.io/repos/github/ClaudioMartinH/4.1-Claudio-Martin/badge.svg?branch=master)](https://coveralls.io/github/ClaudioMartinH/4.1-Claudio-Martin?branch=master)
