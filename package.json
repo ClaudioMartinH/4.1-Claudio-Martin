@@ -2,7 +2,7 @@
   "name": "entrega-4-api-rest",
   "version": "1.0.0",
   "description": "todo list api rest",
-  "type": "module",
+ 
   "main": "index.js",
   "scripts": {
     "test": "vitest",
