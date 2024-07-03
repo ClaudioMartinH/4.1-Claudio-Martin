@@ -59,5 +59,20 @@ contraseña: password123
 
 
 [![GitHub release](https://img.shields.io/github/release/ClaudioMartinH/4.1-Claudio-Martin.svg)](https://github.com/ClaudioMartinH/4.1-Claudio-Martin/releases)
-[![Build Status](https://travis-ci.com/ClaudioMartinH/4.1-Claudio-Martin.svg?branch=master)](https://travis-ci.com/ClaudioMartinH/4.1-Claudio-Martin)
-[![Coverage Status](https://coveralls.io/repos/github/ClaudioMartinH/4.1-Claudio-Martin/badge.svg?branch=master)](https://coveralls.io/github/ClaudioMartinH/4.1-Claudio-Martin?branch=master)
+
+
+<h3 align="center">Esta entrega trata de desarrollar y probar una API REST con Arquitectura Hexagonal.</h3>
+
+> [!NOTE]
+>  Para comenzar, hay que bajarse el repositorio de Github:
+> https://github.com/ClaudioMartinH/4.1-Claudio-Martin.git
+> [!IMPORTANT]
+> Hay que tener instalado
+> ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+> ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+> [!TIP]
+> Una vez tengamos el editor de codigo abierto en la carpeta que contiene el repositorio, podemos ejecutar los siguientes comandos:
+> * npm install   => para instalar dependencias
+> * npm run build => para transpilar el código de Typescript a Javascript
+> * npm start     => para iniciar el servidor y ejecutar las comporobaciones 
+
