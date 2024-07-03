@@ -70,9 +70,15 @@ contraseña: password123
 > Hay que tener instalado
 > ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 > ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
 > [!TIP]
 > Una vez tengamos el editor de codigo abierto en la carpeta que contiene el repositorio, podemos ejecutar los siguientes comandos:
 > * npm install   => para instalar dependencias
 > * npm run build => para transpilar el código de Typescript a Javascript
-> * npm start     => para iniciar el servidor y ejecutar las comporobaciones 
+> * npm start     => para iniciar el servidor y ejecutar las comporobaciones
+> * npm run test  => para ejecutar la suite de test del repositorio
+
+
+
+* Se ha adjuntado la documentación de los tests realizados a los endpoints de la API en el archivo ***./postman/Pruebas TodoAPI REST.postman_test_run.json***
 
