@@ -1,0 +1,407 @@
+{
+	"id": "fa02322a-abe7-4148-a586-0801b0445f63",
+	"name": "Pruebas TodoAPI REST",
+	"timestamp": "2024-07-03T17:32:27.693Z",
+	"collection_id": "36498884-4b6f0433-7fc5-49a2-b562-8b35cee68111",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 34,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-03T17:32:26.691Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "99b24774-a8ef-463b-a0f8-a03712c07c27",
+			"name": "create a new task",
+			"url": "localhost:3000/api/tasks",
+			"time": 99,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required Content-Type header with value 'application/json'": true,
+				"Message is a non-empty string": true,
+				"Message in the response is as expected": true,
+				"Response body should not be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required Content-Type header with value 'application/json'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message in the response is as expected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should not be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required Content-Type header with value 'application/json'": true,
+					"Message is a non-empty string": true,
+					"Message in the response is as expected": true,
+					"Response body should not be empty": true
+				}
+			]
+		},
+		{
+			"id": "f786f5d1-df7d-4f38-823a-9012457b385a",
+			"name": "get tasks after adding one",
+			"url": "localhost:3000/api/tasks",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id, title, and completed": true,
+				"Title is a non-empty string": true,
+				"Completed field is a boolean value": true,
+				"Verify Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, title, and completed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Completed field is a boolean value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id, title, and completed": true,
+					"Title is a non-empty string": true,
+					"Completed field is a boolean value": true,
+					"Verify Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "c1b9a87a-4491-4498-b35d-703358289bae",
+			"name": "update a task",
+			"url": "localhost:3000/api/tasks/1",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required Content-Type header set to application/json": true,
+				"Message field is present in the response": true,
+				"Message field is a non-empty string": true,
+				"Response message is as expected": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required Content-Type header set to application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response message is as expected": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required Content-Type header set to application/json": true,
+					"Message field is present in the response": true,
+					"Message field is a non-empty string": true,
+					"Response message is as expected": true
+				}
+			]
+		},
+		{
+			"id": "96ca3091-375d-4bc8-bb17-b4cd2f79a32f",
+			"name": "toggling task completed",
+			"url": "localhost:3000/api/tasks/1",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is 'application/json'": true,
+				"Message field is present in the response": true,
+				"Message field is a non-empty string": true,
+				"Message has the expected content": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is 'application/json'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message has the expected content": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is 'application/json'": true,
+					"Message field is present in the response": true,
+					"Message field is a non-empty string": true,
+					"Message has the expected content": false
+				}
+			]
+		},
+		{
+			"id": "fdc284b4-3b66-488c-99f3-194dd20c5289",
+			"name": "get task by id after patch",
+			"url": "localhost:3000/api/tasks/1",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type header is application/json": true,
+				"Id is a non-negative integer": true,
+				"Title is a non-empty string": true,
+				"Completed field is a boolean value": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Completed field is a boolean value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type header is application/json": true,
+					"Id is a non-negative integer": true,
+					"Title is a non-empty string": true,
+					"Completed field is a boolean value": true
+				}
+			]
+		},
+		{
+			"id": "f40f1799-4eb4-4aac-b911-3f33a24acd52",
+			"name": "delete a task",
+			"url": "localhost:3000/api/tasks/1",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Message field is present in the response": true,
+				"Message is a non-empty string": true,
+				"Message is as expected": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is as expected": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Message field is present in the response": true,
+					"Message is a non-empty string": true,
+					"Message is as expected": true
+				}
+			]
+		},
+		{
+			"id": "5f7dd88c-3187-4b7b-a88c-9d6b0bf9b473",
+			"name": "create a new user",
+			"url": "localhost:3000/api/users/",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response has the required Content-Type header": true,
+				"Message field is present in the response": true,
+				"Message is a non-empty string": true,
+				"Response body is in valid JSON format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is in valid JSON format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response has the required Content-Type header": true,
+					"Message field is present in the response": true,
+					"Message is a non-empty string": true,
+					"Response body is in valid JSON format": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 128,
+	"collection": {
+		"requests": [
+			{
+				"id": "99b24774-a8ef-463b-a0f8-a03712c07c27",
+				"method": "POST"
+			},
+			{
+				"id": "f786f5d1-df7d-4f38-823a-9012457b385a",
+				"method": "GET"
+			},
+			{
+				"id": "c1b9a87a-4491-4498-b35d-703358289bae",
+				"method": "PUT"
+			},
+			{
+				"id": "96ca3091-375d-4bc8-bb17-b4cd2f79a32f",
+				"method": "PATCH"
+			},
+			{
+				"id": "fdc284b4-3b66-488c-99f3-194dd20c5289",
+				"method": "GET"
+			},
+			{
+				"id": "f40f1799-4eb4-4aac-b911-3f33a24acd52",
+				"method": "DELETE"
+			},
+			{
+				"id": "5f7dd88c-3187-4b7b-a88c-9d6b0bf9b473",
+				"method": "POST"
+			}
+		]
+	}
+}
