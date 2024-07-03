@@ -4,6 +4,10 @@ import { User } from "../../domain/entities/User";
 export class UserRepositoryImpl implements UserRepository {
   private users: User[] = [];
 
+  get getUsers(): User[] {
+    return [...this.users]
+  }
+
   async addUser(user: User): Promise<void> {
     this.users.push(user)
   }

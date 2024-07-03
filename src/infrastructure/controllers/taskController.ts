@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { TaskRepositoryImpl } from "../../domain/repositories/TaskRepositoryImpl";
+import { TaskRepositoryImpl } from "../repositories/TaskRepositoryImpl";
 import { TaskService } from "../../application/services/taskServices";
 import error404 from "../../infrastructure/controllers/errorController";
 

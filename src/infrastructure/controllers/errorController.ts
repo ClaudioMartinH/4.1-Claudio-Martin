@@ -8,3 +8,4 @@ const error404 = (req: Request, res: Response) => {
 };
 
 export default { error404 };
+

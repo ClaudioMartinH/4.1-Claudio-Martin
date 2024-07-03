@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { UserRepositoryImpl } from "../../domain/repositories/UserRepositoryImpl";
+import { UserRepositoryImpl } from "../../infrastructure/repositories/UserRepositoryImpl";
 import { UserServices } from "../../application/services/userServices";
 import { User } from "../../domain/entities/User";
 import error404 from "../../infrastructure/controllers/errorController";

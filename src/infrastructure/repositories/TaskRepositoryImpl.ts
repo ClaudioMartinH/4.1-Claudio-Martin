@@ -4,6 +4,10 @@ import { TaskRepository } from "../../domain/repositories/TaskRepository";
 export class TaskRepositoryImpl implements TaskRepository {
   private tasks: Task[] = [];
 
+  get getTasks(): Task[] {
+    return [...this.tasks]
+  }
+
   async getAllTasks(): Promise<Task[]> {
     return this.tasks;
   }
@@ -33,3 +37,5 @@ export class TaskRepositoryImpl implements TaskRepository {
     }
   }
 }
+
+
