@@ -31,6 +31,6 @@
 * Para autenticarse en la API aquí van las credenciales
   
 | Usuario | Constraseña |
--------------------------
+_________________________
 |  admin  | password123 |
 
