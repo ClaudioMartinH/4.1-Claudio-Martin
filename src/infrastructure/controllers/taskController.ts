@@ -4,7 +4,7 @@ import { TaskService } from "../../application/services/taskServices";
 import error404 from "../../infrastructure/controllers/errorController";
 
 const taskRepository = new TaskRepositoryImpl();
-const taskService = new TaskService(taskRepository);
+
 export class TaskController {
   public async getTasks(req: Request, res: Response) {
     try {
