@@ -29,8 +29,7 @@
 
 * Se ha adjuntado la documentación de los tests realizados a los endpoints de la API en el archivo ***./postman/Pruebas TodoAPI REST.postman_test_run.json***
 * Para autenticarse en la API aquí van las credenciales
-  
-| Usuario | Constraseña |
-_________________________
-|  admin  | password123 |
+
+  usuario: admin
+  contraseña: password123
 
