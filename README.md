@@ -75,7 +75,7 @@ contraseña: password123
 > Una vez tengamos el editor de codigo abierto en la carpeta que contiene el repositorio, podemos ejecutar los siguientes comandos:
 > * npm install   => para instalar dependencias
 > * npm run build => para transpilar el código de Typescript a Javascript
-> * npm start     => para iniciar el servidor y ejecutar las comporobaciones
+> * npm start     => para iniciar el servidor y ejecutar las comprobaciones
 > * npm run test  => para ejecutar la suite de test del repositorio
 
 
