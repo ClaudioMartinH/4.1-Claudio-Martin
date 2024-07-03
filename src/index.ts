@@ -1,9 +1,9 @@
-import express, { NextFunction, Request, Response } from "express";
-import { cacheControlMiddleware } from "./src/middleware/authMiddleware";
-import { corsMiddleware } from "./src/middleware/authMiddleware";
-import { userRouter } from "./src/infrastructure/routes/userRoutes";
-import { taskRouter } from "./src/infrastructure/routes/taskRoutes";
-import errorController from "./src/infrastructure/controllers/errorController";
+import express, { Request } from "express";
+import { cacheControlMiddleware } from "./middleware/authMiddleware";
+import { corsMiddleware } from "./middleware/authMiddleware"
+import { userRouter } from "./infrastructure/routes/userRoutes";
+import { taskRouter } from "./infrastructure/routes/taskRoutes";
+import errorController from "./infrastructure/controllers/errorController";
 import basicAuth from "express-basic-auth";
 
 const app = express(); 
@@ -20,7 +20,7 @@ app.use(
       admin: "password123",
     },
     challenge: true,
-    unauthorizedResponse: (req: express.Request) => "Unauthorized",
+    unauthorizedResponse: (req: Request) => "Unauthorized",
   })
 );
 
