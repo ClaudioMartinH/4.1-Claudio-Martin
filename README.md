@@ -22,10 +22,15 @@
 > Una vez tengamos el editor de codigo abierto en la carpeta que contiene el repositorio, podemos ejecutar los siguientes comandos:
 > * npm install   => para instalar dependencias
 > * npm run build => para transpilar el código de Typescript a Javascript
-> * npm start     => para iniciar el servidor y ejecutar las comporobaciones
+> * npm start     => para iniciar el servidor y ejecutar las comprobaciones
 > * npm run test  => para ejecutar la suite de test del repositorio
 
 
 
 * Se ha adjuntado la documentación de los tests realizados a los endpoints de la API en el archivo ***./postman/Pruebas TodoAPI REST.postman_test_run.json***
+* Para autenticarse en la API aquí van las credenciales
+  
+| Usuario | Constraseña |
+-------------------------
+|  admin  | password123 |
 
