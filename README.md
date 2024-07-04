@@ -40,19 +40,21 @@ contraseña: password123
 > En toda peticion hay que autenticarse con las credenciales anteriormente mencionadas (usuario y contraseña)
 
 <h5>Para crear un usuario: POST  *** localhost:3000/api/users ***</h5>
+  Hay que crear un objeto JSON en el body con las propiedades "username" y "password" con sus datos.
 <h5>Para crear una tarea: POST *** localhost:3000/api/tasks ***</h5>
   Para crearla debemos incluir en el body un objeto JSON con las propiedades "id" seguido de un numero,
-  y la propiedad "title" seguida del titulo de la tarea. Por defecto se guardara como no completada  
+  y la propiedad "title" seguida del titulo de la tarea. Por defecto se guardara como no completada  (false). 
 <h5>Para recuperar las tareas guardadas: GET  *** localhost:3000/api/tasks ***</h5>
 <h5>Para recuperar una tarea por id: GET *** localhost:3000/api/tasks/:id ***</h5>
-  Para recuperar una tarea por id hay que introducir en el endpoint (../tasks/:id) en numero de tarea
+  Para recuperar una tarea por id hay que introducir en el endpoint (../tasks/:id) en numero de tarea.
 <h5>Para marcar como completada una tarea: PATCH *** localhost:3000/api/tasks/:id ***</h5>
+  Hay que incluir en el endpoint (../tasks/:id) el numero de tarea que queremos completar (true).
 <h5>Para editar una tarea: PUT *** localhost:3000/api/tasks/:id ***</h5>
   Para editarla primero hay que introducir en el endpoint (../tasks/:id) en numero de tarea que queremos editar,  
   y seguidamente debemos incluir en el body un objeto JSON con las     
   propiedades "id" seguido de un numero, y la propiedad "title" seguida del titulo de la tarea.  
-  Por defecto se guardara como no completada (false)
+  Por defecto se guardara como no completada (false).
 <h5>Para eliminar una tarea: DELETE *** localhost:3000/api/tasks/:id ***</h5>
- Hay que incluir en el endpoint (../tasks/:id) el numero de tarea que queremos eliminar
+ Hay que incluir en el endpoint (../tasks/:id) el numero de tarea que queremos eliminar.
 
 
