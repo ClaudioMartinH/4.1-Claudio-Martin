@@ -36,12 +36,12 @@ contraseña: password123
 
 <h4>Las rutas de la API son las siguientes:</h4>
 
-- Para crear un usuario: POST  ** localhost:3000/api/users **
-- Para crear una tarea: POST ** localhost:3000/api/tasks **
-- Para recuperar las tareas guardadas: GET  ** localhost:3000/api/tasks **
-- Para recuperar una tarea por id: GET ** localhost:3000/api/tasks/:id **
-- Para marcar como completada una tarea: PATCH ** localhost:3000/api/tasks/:id **
-- Para editar una tarea: PUT ** localhost:3000/api/tasks/:id **
-- Para eliminar una tarea: DELETE ** localhost:3000/api/tasks/:id **
+- Para crear un usuario: POST  *** localhost:3000/api/users ***
+- Para crear una tarea: POST *** localhost:3000/api/tasks ***
+- Para recuperar las tareas guardadas: GET  *** localhost:3000/api/tasks ***
+- Para recuperar una tarea por id: GET *** localhost:3000/api/tasks/:id ***
+- Para marcar como completada una tarea: PATCH *** localhost:3000/api/tasks/:id ***
+- Para editar una tarea: PUT *** localhost:3000/api/tasks/:id ***
+- Para eliminar una tarea: DELETE *** localhost:3000/api/tasks/:id ***
 
 
