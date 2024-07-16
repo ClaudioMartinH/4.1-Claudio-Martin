@@ -2,7 +2,7 @@ import { Task } from "../../domain/entities/Task";
 import { TaskRepository } from "../../domain/repositories/TaskRepository";
 
 export class TaskRepositoryImpl implements TaskRepository {
-  private tasks: Task[] = [];
+  public tasks: Task[] = [];
 
   get getTasks(): Task[] {
     return [...this.tasks]

@@ -1,6 +1,6 @@
 export class Task {
-    id: number
-    title: string
+    id: Number
+    title: String
     completed: boolean
 
     constructor(id: number, title: string, completed: boolean){

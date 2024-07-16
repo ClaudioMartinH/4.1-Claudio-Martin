@@ -26,12 +26,15 @@
 
 
 
-* Se ha adjuntado la documentación de los tests realizados a los endpoints de la API en el archivo ***./postman/Pruebas TodoAPI REST.postman_test_run.json***
+* Se ha adjuntado la documentación de los tests realizados a los endpoints de la API en el archivo 
+```
+./postman/Pruebas TodoAPI REST.postman_test_run.json
+```
 * Para autenticarse en la API aquí van las credenciales
-
+```
 usuario: admin  
 contraseña: password123  
-
+```
 
 <h4>Las rutas de la API son las siguientes:</h4>
 
@@ -41,8 +44,7 @@ contraseña: password123
 <h5>Para crear un usuario: POST  *** localhost:3000/api/users ***</h5>
   Hay que crear un objeto JSON en el body con las propiedades "username" y "password" con sus datos.
 <h5>Para crear una tarea: POST *** localhost:3000/api/tasks ***</h5>
-  Para crearla debemos incluir en el body un objeto JSON con las propiedades "id" seguido de un numero,
-  y la propiedad "title" seguida del titulo de la tarea. Por defecto se guardara como no completada  (false). 
+  Para crearla debemos incluir en el body un objeto JSON la propiedad "title" seguida del titulo de la tarea. Por defecto se guardara como no completada  (false) y la id se generara de manera automatica.
 <h5>Para recuperar las tareas guardadas: GET  *** localhost:3000/api/tasks ***</h5>
 <h5>Para recuperar una tarea por id: GET *** localhost:3000/api/tasks/:id ***</h5>
   Para recuperar una tarea por id hay que introducir en el endpoint (../tasks/:id) en numero de tarea.
